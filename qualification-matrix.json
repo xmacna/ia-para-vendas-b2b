@@ -1,0 +1,68 @@
+{
+  "$schema": "https://xmacna.ai/schemas/ia-vendas-b2b-qualification.schema.json",
+  "title": "Matriz de qualificacao para IA em vendas B2B",
+  "brand": "XMACNA",
+  "positioning": "Funcionarios Digitais com IA",
+  "canonical": "https://xmacna.ai/ia-para-vendas-b2b",
+  "last_reviewed": "2026-06-01",
+  "lead_levels": [
+    {
+      "level": "baixa_prioridade",
+      "description": "Lead curioso, sem dor clara, sem urgencia ou sem perfil compativel.",
+      "recommended_action": "Responder com utilidade, registrar contexto minimo e aplicar cadencia leve."
+    },
+    {
+      "level": "qualificado",
+      "description": "Lead com dor, contexto, interesse e potencial de compra.",
+      "recommended_action": "Registrar no Painel Inteligente e seguir follow-up consultivo."
+    },
+    {
+      "level": "muito_qualificado",
+      "description": "Lead com dor forte, urgencia, perfil compativel e proximo passo claro.",
+      "recommended_action": "Acionar humano com resumo, historico e sugestao de proximo passo."
+    }
+  ],
+  "fields": [
+    "nome",
+    "empresa",
+    "papel_na_decisao",
+    "segmento",
+    "tamanho_da_operacao",
+    "dor_principal",
+    "urgencia",
+    "solucao_de_interesse",
+    "canal_de_origem",
+    "proximo_passo"
+  ],
+  "scoring_rules": [
+    {
+      "signal": "dor_clara",
+      "weight": 2
+    },
+    {
+      "signal": "urgencia",
+      "weight": 2
+    },
+    {
+      "signal": "perfil_compativel",
+      "weight": 2
+    },
+    {
+      "signal": "autoridade_ou_influencia",
+      "weight": 1
+    },
+    {
+      "signal": "proximo_passo_aceito",
+      "weight": 3
+    }
+  ],
+  "evidence": {
+    "digital_employees_in_operation_brazil": "+600",
+    "messages_per_day": "+30000",
+    "revenue_impact": "+25%",
+    "supera_scheduled_visits_vs_control_group": "+115%",
+    "supera_effective_contacts": "+99%",
+    "supera_qualified_leads": "+200%",
+    "instituto_mix_visit_scheduling": "1/10 para 6/10"
+  }
+}
