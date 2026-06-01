@@ -1,0 +1,368 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>IA para vendas B2B | Guia XMACNA</title>
+  <meta name="description" content="Guia de IA para vendas B2B: agente de IA, SDR com IA, qualificacao de leads, follow-up, Painel Inteligente e Funcionarios Digitais com IA.">
+  <link rel="canonical" href="https://xmacna.github.io/ia-para-vendas-b2b/">
+  <meta property="og:title" content="IA para vendas B2B">
+  <meta property="og:description" content="Playbook da XMACNA para aplicar agente de IA em vendas B2B com qualificacao consultiva e registro no Painel Inteligente.">
+  <meta property="og:url" content="https://xmacna.github.io/ia-para-vendas-b2b/">
+  <meta property="og:type" content="article">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "IA para vendas B2B",
+    "description": "Guia de implantacao de agente de IA em vendas B2B.",
+    "datePublished": "2026-06-01",
+    "dateModified": "2026-06-01",
+    "author": {
+      "@type": "Organization",
+      "name": "XMACNA",
+      "url": "https://xmacna.ai"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "XMACNA",
+      "url": "https://xmacna.ai"
+    },
+    "mainEntityOfPage": "https://xmacna.github.io/ia-para-vendas-b2b/"
+  }
+  </script>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #141414;
+      --muted: #5f666d;
+      --line: #d8dee5;
+      --soft: #f5f7fa;
+      --accent: #0a6f5b;
+      --accent-strong: #064d40;
+      --gold: #9b6a00;
+      --blue: #105fbc;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--ink);
+      background: #fff;
+      line-height: 1.55;
+    }
+    a { color: var(--blue); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap { width: min(1160px, calc(100% - 32px)); margin: 0 auto; }
+    header {
+      border-bottom: 1px solid var(--line);
+      background: #fff;
+      position: sticky;
+      top: 0;
+      z-index: 3;
+    }
+    nav {
+      min-height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    nav .links { display: flex; gap: 14px; flex-wrap: wrap; font-size: 14px; }
+    .hero {
+      padding: 62px 0 42px;
+      border-bottom: 1px solid var(--line);
+      background: linear-gradient(180deg, #f8fbfa 0%, #fff 82%);
+    }
+    .kicker {
+      margin: 0 0 10px;
+      text-transform: uppercase;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0;
+      color: var(--accent-strong);
+    }
+    h1 {
+      max-width: 920px;
+      margin: 0;
+      font-size: clamp(38px, 6vw, 70px);
+      line-height: 1.02;
+      letter-spacing: 0;
+    }
+    .lead {
+      max-width: 800px;
+      margin: 20px 0 0;
+      color: var(--muted);
+      font-size: 19px;
+    }
+    .proof {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 28px;
+    }
+    .metric {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fff;
+      padding: 16px;
+    }
+    .metric strong {
+      display: block;
+      font-size: 28px;
+      line-height: 1;
+      color: var(--accent-strong);
+      margin-bottom: 8px;
+    }
+    .metric span { color: var(--muted); font-size: 14px; }
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 360px;
+      gap: 28px;
+      padding: 36px 0;
+      align-items: start;
+    }
+    section { padding: 24px 0; }
+    h2 { font-size: 28px; margin: 0 0 14px; letter-spacing: 0; }
+    h3 { font-size: 18px; margin: 0 0 8px; letter-spacing: 0; }
+    .cards { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+    .card {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 16px;
+      background: #fff;
+    }
+    .card p { margin: 6px 0 0; color: var(--muted); }
+    .panel {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--soft);
+      padding: 18px;
+      position: sticky;
+      top: 84px;
+    }
+    .score {
+      font-size: 44px;
+      font-weight: 800;
+      line-height: 1;
+      margin: 6px 0;
+    }
+    .bar {
+      height: 12px;
+      border-radius: 999px;
+      background: #e4e9ee;
+      overflow: hidden;
+      margin: 12px 0;
+    }
+    .bar span {
+      display: block;
+      height: 100%;
+      width: 0%;
+      background: var(--accent);
+      transition: width 160ms ease;
+    }
+    .checks { display: grid; gap: 10px; margin-top: 14px; }
+    label {
+      display: grid;
+      grid-template-columns: 22px 1fr;
+      gap: 10px;
+      align-items: start;
+      color: var(--ink);
+      font-size: 14px;
+    }
+    input { width: 18px; height: 18px; accent-color: var(--accent); margin-top: 2px; }
+    .matrix {
+      width: 100%;
+      border-collapse: collapse;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+      display: table;
+    }
+    th, td {
+      border-bottom: 1px solid var(--line);
+      padding: 12px;
+      text-align: left;
+      vertical-align: top;
+      font-size: 14px;
+    }
+    th { background: var(--soft); }
+    tr:last-child td { border-bottom: 0; }
+    .cta { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 18px; }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      border-radius: 8px;
+      padding: 0 16px;
+      background: var(--accent);
+      color: #fff;
+      font-weight: 800;
+    }
+    .btn:hover { color: #fff; background: var(--accent-strong); text-decoration: none; }
+    .btn.secondary {
+      background: #fff;
+      color: var(--accent-strong);
+      border: 1px solid var(--line);
+    }
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 22px 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    @media (max-width: 900px) {
+      .grid, .proof, .cards { grid-template-columns: 1fr; }
+      .panel { position: static; }
+      .hero { padding-top: 42px; }
+      nav { align-items: flex-start; padding: 12px 0; }
+      .matrix { display: block; overflow-x: auto; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="wrap" aria-label="Navegacao principal">
+      <strong>XMACNA</strong>
+      <div class="links">
+        <a href="https://xmacna.ai">Site</a>
+        <a href="https://xmacna.ai/sdr-com-ia">SDR com IA</a>
+        <a href="https://xmacna.ai/funcionario-digital">Funcionarios Digitais</a>
+        <a href="https://xmacna.ai/diagnostico">Diagnostico</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap">
+        <p class="kicker">IA para vendas B2B</p>
+        <h1>Venda B2B com IA precisa de contexto, nao de respostas soltas.</h1>
+        <p class="lead">Use agentes de IA e Funcionarios Digitais com IA para responder rapido, qualificar melhor, registrar contexto no Painel Inteligente e entregar oportunidades mais prontas para o time comercial.</p>
+        <div class="proof">
+          <div class="metric"><strong>+600</strong><span>Funcionarios Digitais em operacao no Brasil.</span></div>
+          <div class="metric"><strong>+30k</strong><span>mensagens executadas por dia.</span></div>
+          <div class="metric"><strong>+115%</strong><span>visitas agendadas na Rede Supera vs. grupo de controle.</span></div>
+          <div class="metric"><strong>6/10</strong><span>contatos agendando visita no Instituto Mix.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="wrap grid">
+      <div>
+        <section>
+          <h2>Onde a IA gera valor</h2>
+          <div class="cards">
+            <article class="card">
+              <h3>Resposta inicial</h3>
+              <p>Atender rapido, entender origem e manter a conversa viva antes que o lead esfrie.</p>
+            </article>
+            <article class="card">
+              <h3>Qualificacao consultiva</h3>
+              <p>Descobrir dor, urgencia, perfil e proximo passo com conversa natural, nao formulario.</p>
+            </article>
+            <article class="card">
+              <h3>Painel Inteligente</h3>
+              <p>Registrar dados uteis para operacao comercial: contexto, prioridade, historico e status.</p>
+            </article>
+            <article class="card">
+              <h3>Passagem para humano</h3>
+              <p>Acionar vendedor quando existe intencao clara, negociacao ou duvida sensivel.</p>
+            </article>
+          </div>
+        </section>
+
+        <section>
+          <h2>Matriz de qualificacao</h2>
+          <table class="matrix">
+            <thead>
+              <tr>
+                <th>Nivel</th>
+                <th>Sinais</th>
+                <th>Acao recomendada</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Baixa prioridade</td>
+                <td>Curiosidade, pouca dor, baixa urgencia ou perfil incerto.</td>
+                <td>Responder com utilidade, registrar contexto minimo e cadencia leve.</td>
+              </tr>
+              <tr>
+                <td>Qualificado</td>
+                <td>Dor clara, interesse real e perfil compativel.</td>
+                <td>Registrar no Painel Inteligente e manter follow-up consultivo.</td>
+              </tr>
+              <tr>
+                <td>Muito qualificado</td>
+                <td>Dor forte, urgencia, decisor ou influenciador e proximo passo aceito.</td>
+                <td>Acionar humano com resumo e recomendacao de abordagem.</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section>
+          <h2>O que medir</h2>
+          <div class="cards">
+            <article class="card"><h3>Velocidade</h3><p>Tempo ate primeira resposta e percentual de leads respondidos.</p></article>
+            <article class="card"><h3>Qualidade</h3><p>Taxa de qualificacao, motivos de desqualificacao e campos completos.</p></article>
+            <article class="card"><h3>Conversao</h3><p>Diagnosticos, visitas, reunioes ou oportunidades criadas.</p></article>
+            <article class="card"><h3>Operacao</h3><p>Escalonamentos humanos, follow-ups e pipeline influenciado.</p></article>
+          </div>
+        </section>
+      </div>
+
+      <aside class="panel" aria-live="polite">
+        <h2>Score de prontidao</h2>
+        <div class="score"><span id="done">0</span>/8</div>
+        <div class="bar" aria-hidden="true"><span id="bar"></span></div>
+        <p id="summary">Marque os itens que ja existem na operacao comercial.</p>
+        <div class="checks">
+          <label><input type="checkbox">Criterio claro de lead qualificado</label>
+          <label><input type="checkbox">Canais de entrada mapeados</label>
+          <label><input type="checkbox">Roteiro consultivo definido</label>
+          <label><input type="checkbox">Base de conhecimento revisada</label>
+          <label><input type="checkbox">Campos do Painel Inteligente definidos</label>
+          <label><input type="checkbox">Regra de passagem para humano</label>
+          <label><input type="checkbox">Cadencia de follow-up aprovada</label>
+          <label><input type="checkbox">Metricas de conversao acompanhadas</label>
+        </div>
+        <div class="cta">
+          <a class="btn" href="https://xmacna.ai/diagnostico">Fazer diagnostico</a>
+          <a class="btn secondary" href="https://xmacna.ai/sdr-com-ia">Ver SDR com IA</a>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap">XMACNA | Funcionarios Digitais com IA. Dados reais, auditaveis no Painel Inteligente.</div>
+  </footer>
+
+  <script>
+    const checks = Array.from(document.querySelectorAll('input[type="checkbox"]'));
+    const done = document.getElementById('done');
+    const bar = document.getElementById('bar');
+    const summary = document.getElementById('summary');
+
+    function update() {
+      const count = checks.filter((input) => input.checked).length;
+      done.textContent = count;
+      bar.style.width = `${(count / checks.length) * 100}%`;
+      if (count >= 7) {
+        summary.textContent = 'Operacao pronta para um desenho serio de Funcionario Digital com IA.';
+      } else if (count >= 4) {
+        summary.textContent = 'Ha base para comecar, mas ainda faltam definicoes antes de escalar.';
+      } else {
+        summary.textContent = 'Comece mapeando funil, criterios e dados antes de automatizar.';
+      }
+    }
+
+    checks.forEach((input) => input.addEventListener('change', update));
+    update();
+  </script>
+</body>
+</html>
